@@ -1,0 +1,151 @@
+.identity {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 24px;
+
+  background: #050505;
+}
+
+.identity-inner {
+  width: 100%;
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.identity-label {
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 5px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.identity-mark {
+  margin: 40px 0 25px;
+}
+
+.identity-avatar {
+  width: 180px;
+  height: 180px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      #1e1e2b,
+      #09090c 65%
+    );
+
+  box-shadow:
+    0 0 60px rgba(110, 80, 255, 0.15);
+}
+
+.identity-avatar span {
+  font-size: 70px;
+
+  font-weight: 900;
+
+  letter-spacing: -8px;
+}
+
+.identity-text {
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.platform-links {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 45px;
+}
+
+.platform-link {
+  width: 85px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 18px 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 12px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.platform-link span {
+  font-size: 24px;
+}
+
+.platform-link small {
+  font-size: 8px;
+
+  letter-spacing: 1px;
+
+  opacity: 0.65;
+}
+
+.platform-link:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 255, 255, 0.7);
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 500px) {
+  .identity-avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .identity-avatar span {
+    font-size: 55px;
+  }
+
+  .platform-links {
+    gap: 10px;
+  }
+
+  .platform-link {
+    width: 70px;
+  }
+}

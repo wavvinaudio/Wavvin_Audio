@@ -1,0 +1,12 @@
+:root {
+  --bg: #050505;
+  --surface: #101014;
+  --text: #ffffff;
+  --muted: #8c8c96;
+
+  --accent-purple: #7b61ff;
+  --accent-red: #ff3b5c;
+  --accent-blue: #485cff;
+
+  --radius: 16px;
+}
