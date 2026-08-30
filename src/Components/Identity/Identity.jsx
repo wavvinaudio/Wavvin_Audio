@@ -37,9 +37,18 @@ function Identity() {
         </div>
 
         <p className="identity-text">
-          DNB • JUNGLE • EXPERIMENTAL
+          HIP-HOP/RAP • JUNGLE • EXPERIMENTAL
         </p>
+<h2>We Are The Wav In Audio.</h2>
 
+      <p></p>
+
+      <p>
+        WAVvin Audio is an independent South African audio platform exploring
+        DnB (Drum and Bass), Jungle, experimental music, Hip Hop, Trap, Deep
+        House, Lo-Fi and Amapiano. WAVvin Audio features original music,
+        instrumentals, beats and evolving audio experiences.
+      </p>
         <div className="platform-links">
           {platforms.map((platform) => (
             <a

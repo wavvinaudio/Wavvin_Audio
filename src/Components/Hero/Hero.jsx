@@ -10,7 +10,7 @@ function Hero() {
       <div className="hero-content">
         <p className="hero-brand">WAVVIN AUDIO</p>
 
-        <h1 className="hero-title">WAVVIN</h1>
+        <h1 className="hero-title">WAVVIN Audio</h1>
 
         <p className="hero-tagline">
           SOUND WITHOUT LIMITS.
