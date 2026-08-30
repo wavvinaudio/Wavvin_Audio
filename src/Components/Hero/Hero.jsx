@@ -8,12 +8,13 @@ function Hero() {
       <div className="hero-glow glow-blue"></div>
 
       <div className="hero-content">
-        <p className="hero-brand">WAVVIN AUDIO</p>
 
         <h1 className="hero-title">WAVVIN Audio</h1>
-
+        
+        <h2 className="hero-tagline">We Are The Wav In Audio</h2>
         <p className="hero-tagline">
-          SOUND WITHOUT LIMITS.
+          Discover Hip Hop, Trap, Drum and Bass, Jungle, Deep House,
+    Lo-Fi, Amapiano and experimental music.
         </p>
 
         <div className="hero-actions">

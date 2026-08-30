@@ -201,3 +201,123 @@
     width: 100%;
   }
 }
+/* =========================================
+   WAVVIN HERO — VISUAL POLISH
+   ========================================= */
+
+.hero {
+  isolation: isolate;
+}
+
+/* Make the title feel more like a brand mark */
+.hero-title {
+  position: relative;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 18px rgba(255, 255, 255, 0.12),
+    0 0 45px rgba(170, 59, 255, 0.18);
+}
+
+/* Subtle WAVVIN signal/glitch feel */
+.hero-title::after {
+  content: "WAVVIN AUDIO";
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(170, 59, 255, 0.18);
+  transform: translate(3px, 2px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Brand label */
+.hero-brand {
+  text-transform: uppercase;
+  opacity: 0.85;
+  transition:
+    opacity 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.hero-brand:hover {
+  opacity: 1;
+  letter-spacing: 7px;
+}
+
+/* Tagline */
+.hero-tagline {
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+/* Buttons become more responsive */
+.primary-button,
+.secondary-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-button::before,
+.secondary-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.55s ease;
+}
+
+.primary-button:hover::before,
+.secondary-button:hover::before {
+  left: 140%;
+}
+
+/* Give the background energy */
+.hero-glow {
+  will-change: transform, opacity;
+  animation: wavvinPulse 7s ease-in-out infinite alternate;
+}
+
+.glow-purple {
+  animation-delay: -2s;
+}
+
+.glow-blue {
+  animation-delay: -4s;
+}
+
+.glow-red {
+  animation-delay: -6s;
+}
+
+@keyframes wavvinPulse {
+  from {
+    transform: scale(0.96);
+    opacity: 0.24;
+  }
+
+  to {
+    transform: scale(1.06);
+    opacity: 0.38;
+  }
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow {
+    animation: none;
+  }
+
+  .primary-button::before,
+  .secondary-button::before {
+    transition: none;
+  }
+}
