@@ -47,7 +47,7 @@ function Media() {
               key={platform.name}
               href={platform.url}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="media-card"
             >
               <div className="media-top">

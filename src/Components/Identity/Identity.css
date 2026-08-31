@@ -1,3 +1,7 @@
+/* =========================================
+   WAVVIN IDENTITY
+========================================= */
+
 .identity {
   min-height: 100vh;
 
@@ -8,9 +12,15 @@
   padding: 100px 24px;
 
   background: #050505;
+
+  position: relative;
+  overflow: hidden;
 }
 
 .identity-inner {
+  position: relative;
+  z-index: 1;
+
   width: 100%;
   max-width: 900px;
 
@@ -21,14 +31,23 @@
   text-align: center;
 }
 
+/* =========================================
+   LABEL
+========================================= */
+
 .identity-label {
+  margin: 0;
+
   font-size: 11px;
   font-weight: 700;
-
   letter-spacing: 5px;
 
   color: rgba(255, 255, 255, 0.5);
 }
+
+/* =========================================
+   WAVVIN MARK
+========================================= */
 
 .identity-mark {
   margin: 40px 0 25px;
@@ -58,27 +77,62 @@
 
 .identity-avatar span {
   font-size: 70px;
-
   font-weight: 900;
 
   letter-spacing: -8px;
+
+  color: #ffffff;
 }
 
-.identity-text {
-  font-size: 11px;
+/* =========================================
+   TEXT
+========================================= */
 
+.identity-text {
+  margin: 0;
+
+  font-size: 11px;
   font-weight: 700;
 
+  line-height: 1.8;
   letter-spacing: 3px;
 
   color: rgba(255, 255, 255, 0.6);
 }
 
+.identity-genres {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.identity-title {
+  margin: 28px 0 20px;
+
+  color: #ffffff;
+
+  font-size: clamp(28px, 5vw, 58px);
+  font-weight: 900;
+
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+
+  text-transform: uppercase;
+}
+
+.identity-description {
+  max-width: 720px;
+
+  font-weight: 500;
+  letter-spacing: 1.5px;
+color: rgba(255, 255, 255, 0.65);
+}
+
+/* =========================================
+   PLATFORM LINKS
+========================================= */
+
 .platform-links {
   display: flex;
-
   justify-content: center;
-
   flex-wrap: wrap;
 
   gap: 16px;
@@ -98,7 +152,6 @@
   padding: 18px 10px;
 
   border: 1px solid rgba(255, 255, 255, 0.12);
-
   border-radius: 12px;
 
   color: #ffffff;
@@ -131,6 +184,28 @@
   background: rgba(255, 255, 255, 0.05);
 }
 
+.platform-link:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .identity {
+    min-height: auto;
+
+    padding: 90px 20px;
+  }
+
+  .identity-description {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+
 @media (max-width: 500px) {
   .identity-avatar {
     width: 140px;
@@ -141,11 +216,25 @@
     font-size: 55px;
   }
 
+  .identity-title {
+    font-size: clamp(28px, 10vw, 46px);
+  }
+
   .platform-links {
     gap: 10px;
   }
 
   .platform-link {
     width: 70px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .platform-link {
+    transition: none;
   }
 }
